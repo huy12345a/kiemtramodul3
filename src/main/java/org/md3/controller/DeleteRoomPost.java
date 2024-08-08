@@ -1,3 +1,4 @@
+
 package org.md3.controller;
 
 import org.md3.model.Room;
@@ -36,7 +37,6 @@ public class DeleteRoomPost extends HttpServlet {
 
             request.setAttribute("success", "Room deleted");
             request.getRequestDispatcher("room/delete.jsp").forward(request, response);
-            
         } catch ( Exception e ) {
             e.printStackTrace();
         }

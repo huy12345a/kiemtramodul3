@@ -6,7 +6,7 @@
             <tr>
                 <th><label for="searchRoomCode">Area</label></th>
                 <th><label for="searchRoomFloor">Floor</label></th>
-                <th><label for="searchProductColor">Start Date</label></th>
+                <th><%--@declare id="searchproductcolor"--%><label for="searchProductColor">Start Date</label></th>
                 <th><label for="searchRoomStartDate">End Date</label></th>
                 <th><label for="searchFromClear">Clear</label></th>
                 <th></th>

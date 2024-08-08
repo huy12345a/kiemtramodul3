@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="org.md3.model.RoomStatus" %>
+<%@ page import="org.md3.model.RoomType" %>
 
 
 <jsp:include page="../message.jsp" />
@@ -45,13 +46,13 @@
             <td>
                 <input type="number" required name="roomFloor" id="roomFloor" step="1" min="1" max="15">
             </td>
-<%--            <td>--%>
-<%--                <select id="roomFloor" name="roomFloor" required>--%>
-<%--                    <c:forEach var="status" items="${RoomStatus.values()}">--%>
-<%--                        <option value="${status}"><c:out value="${status}"/></option>--%>
-<%--                    </c:forEach>--%>
-<%--                </select>--%>
-<%--            </td>--%>
+            <%--            <td>--%>
+            <%--                <select id="roomFloor" name="roomFloor" required>--%>
+            <%--                    <c:forEach var="status" items="${RoomStatus.values()}">--%>
+            <%--                        <option value="${status}"><c:out value="${status}"/></option>--%>
+            <%--                    </c:forEach>--%>
+            <%--                </select>--%>
+            <%--            </td>--%>
         </tr>
 
         <tr>
@@ -60,8 +61,8 @@
             </td>
             <td>
                 <select id="roomType" name="roomType" required>
-                    <c:forEach var="status" items="${RoomStatus.values()}">
-                        <option value="${status}"><c:out value="${status}"/></option>
+                    <c:forEach var="type" items="${RoomType.values()}">
+                        <option value="${type}"><c:out value="${type}"/></option>
                     </c:forEach>
                 </select>
             </td>
@@ -86,7 +87,7 @@
         </tr>
         <tr>
             <td>
-                <label for="roomStartDate">Price</label>
+                <label for="roomStartDate">Start Date</label>
             </td>
             <td>
                 <input id="roomStartDate" type="date" required name="roomStartDate">
@@ -95,7 +96,7 @@
 
         <tr>
             <td>
-                <label for="roomEndDate">Price</label>
+                <label for="roomEndDate">End Date</label>
             </td>
             <td>
                 <input id="roomEndDate" type="date" required name="roomEndDate">
@@ -105,7 +106,7 @@
             <td>
                 <input class="btn btn-primary btn-sm" type="submit" value="Create">
                 |
-                <a class="btn btn-secondary btn-sm" href="?">Cancel</a>
+                <a class="btn btn-secondary btn-sm" href="list-room">Cancel</a>
             </td>
         </tr>
 
